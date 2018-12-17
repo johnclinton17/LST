@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  background-image: url(../images/bg-dark.jpg),
+    linear-gradient(135deg, #2d343d, #495058);
+  background-size: cover;
+  background-position: 50%;
+  background-color: #3e454e;
+  transition: background 2s ease-out;
+}
+* {
+  font-family: Montserrat, sans-serif !important;
+}
+@keyframes a {
+  0% {
+    transform: scaleX(1);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.3, 1.3, 1.3) rotate(3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.3, 1.3, 1.3) rotate(-3deg);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.theme-switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: auto;
+  height: auto;
+  z-index: 1010;
+}
+.theme-switch a {
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+  display: inline-block;
+   border: 1px solid #8242fa;
+  box-shadow: 0 0 30px rgba(59, 105, 255, 0.5);
+}
+.theme-switch a:first-child {
+
+  background: #070707;
+}
+.theme-switch a:nth-child(2) {
+  background: #fff;
+}
+.theme-switch a:nth-child(3) {
+    background: #13a113;
+  }
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  z-index: 100;
+}
+@media only screen and (max-device-width: 480px) {
+  .footer {
+    position: relative;
+  }
+}
+.footer span {
+  width: 100%;
+  display: block;
+  font-size: 12px;
+  color: #000;
+}
+@media only screen and (max-device-width: 480px) {
+  .logo-branding {
+    width: 95% !important;
+  }
+}
+.position-relative {
+  position: relative;
+}
+.tabmenu {
+  width: 90%;
+  margin: auto;
+  background: linear-gradient(
+    270deg,
+    hsla(0, 0%, 100%, 0),
+    rgba(47, 57, 72, 0.9),
+    hsla(0, 0%, 100%, 0)
+  ) !important;
+  height: fit-content;
+  border-radius: 30px;
+  background-clip: padding-box;
+}
+.tabmenu .filter-button {
+  display: inline-block;
+  width: 100px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff !important;
+  border-radius: 30px;
+  background-clip: padding-box;
+  padding: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 1s ease-out;
+}
+.tabmenu .filter-button:hover {
+  border: 1px solid #42b32f;
+  text-align: center;
+}
+.tabmenu .filter-button.active,
+.tabmenu .filter-button:hover {
+  color: #fff !important;
+  background: linear-gradient(270deg, #6b47c9, #bf4c7f) !important;
+}
+main {
+  position: relative;
+  z-index: 1000;
+}
+.portals {
+  width: 90%;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  padding-bottom: 50px !important;
+  height: fit-content;
+  text-align: center;
+}
+.portals li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  color: #fff;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+.portals li .g {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: #151f2e;
+  background-clip: padding-box;
+  padding: 3px;
+  width: 120px;
+  height: 120px;
+  margin: 0.3rem !important;
+  box-shadow: 0 0 30px rgba(45, 59, 255, 0.5);
+  display: inline-block;
+}
+@media screen and (max-width: 1440px) {
+  .portals li .g {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 2dppx),
+  only screen and (min-resolution: 220dpi) {
+  .portals li .g {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .portals li .g {
+    width: 100px;
+    height: 100px;
+  }
+}
+.portals li .g:hover:after {
+  background: #fff;
+  box-shadow: 0 0 30px rgba(45, 59, 255, 0.8);
+}
+.portals li .g:after {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  background: linear-gradient(180deg, #6b47c9, #bf4c7f);
+  content: "";
+  z-index: -1;
+  border-radius: 50%;
+}
+.portals li .g > div {
+  width: 100%;
+  height: 100%;
+  transition: width 0.3s ease, height 0.3s ease;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.portals li .g > div .hidden-title {
+  width: 69%;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  color: #000;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0;
+  transition: bottom 0.5s ease, opacity 0.5s ease;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 5px;
+  background: linear-gradient(270deg, #fffaf5, #fffaf5, #fff) !important;
+  border-radius: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (max-device-width: 480px) {
+  .portals li .g > div .hidden-title {
+    font-size: 50%;
+  }
+}
+.portals li .g > div .hidden-title:hover {
+  background: #fff;
+}
+.portals li .g > div .hidden-title span {
+  width: 19px;
+  height: 13px;
+  background: url(../images/link-arow.png) 100% no-repeat;
+  display: inline-block;
+  animation: a 1s infinite linear;
+}
+.portals li .g > div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 52px;
+  transition: transform 0.5s ease;
+}
+@media only screen and (max-device-width: 1400px) {
+  .portals li .g > div img {
+    width: 90px;
+    height: 43px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 2dppx),
+  only screen and (min-resolution: 220dpi) {
+  .portals li .g > div img {
+    width: 110px;
+    height: 52px;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .portals li .g > div img {
+    width: 80px;
+    height: 37px;
+  }
+}
+canvas {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+.form-signin {
+  width: 450px;
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 30, 40, 0.7),
+    rgba(26, 30, 40, 0.7)
+  ) !important;
+  box-shadow: 0 0 500px #000;
+  padding: 60px;
+}
+.form-signin .wavebg .checkbox {
+  font-weight: 400;
+  color: #fff;
+  font-size: 12px;
+}
+.form-signin .wavebg .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 14px;
+}
+.form-signin .wavebg .form-control:focus {
+  z-index: 2;
+}
+.form-signin .wavebg input[type="text"] {
+  margin-bottom: -1px;
+  border-radius: 30px;
+  background-clip: padding-box;
+  border: 0;
+}
+.form-signin .wavebg input[type="text"].username {
+  background: url(../images/icon-user.png) no-repeat 0 #2b363e;
+  background-size: 24px 24px;
+  background-position-x: 8px;
+}
+.form-signin .wavebg input[type="password"] {
+  margin-bottom: 10px;
+  border-radius: 30px;
+  background-clip: padding-box;
+  background: url(../images/icon-password.png) no-repeat 0 #2b363e;
+  background-size: 24px 24px;
+  background-position-x: 8px;
+  border: 0;
+}
+.form-signin .wavebg input[placeholder] {
+  padding-left: 30px;
+  color: #5d6d76;
+  font-size: 14px;
+}
+.form-signin .wavebg input[type="submit"] {
+  background: none;
+  border: 0;
+  background: linear-gradient(90deg, #59c6d2, #6b47c9, #bf4c7f) !important;
+  border-radius: 30px;
+  background-clip: padding-box;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+.form-signin .wavebg input[type="submit"]:hover {
+  background: #1a1e28;
+}
+.form-signin .wavebg a,
+.form-signin .wavebg p {
+  color: #fff;
+  font-size: 12px;
+}
+.form-signin .wavebg p {
+  line-height: 20px;
+}
