@@ -1,0 +1,76 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+body{
+	min-height: 100vh;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: flex-end;
+    -webkit-justify-content : flex-end;
+    box-sizing: border-box;
+}
+
+a {
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+.bg-cyan {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00897b+0,004d40+100 */
+	background: rgb(0, 11, 41); /* Old browsers */
+	background-image: url(../images/login_bg.png);
+	background-size: 100% 100%;
+}
+
+.body {
+	padding: 0px 100px;
+}
+
+.welcome-text{
+	text-align: center;
+	margin-bottom: 20px !important;
+}
+
+.welcome-text label{
+	color: #159DEF;
+	border-bottom: 1px solid #159DEF;
+	font-size: 18px;
+	padding-bottom: 25px;
+	letter-spacing: 2px;
+}
+
+@media screen and (max-width: 600px) {
+	.body {
+	    padding: 0;
+	}
+    
+    	body{
+	    -webkit-justify-content: center;
+	    overflow:hidden;
+	}
+}
+
+.error-message{
+    color: #ff5151;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+
+.owner-note {
+    text-transform: uppercase;
+    color: #ACACAC;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 50px;
+}
